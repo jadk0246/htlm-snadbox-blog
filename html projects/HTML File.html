@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>poopooppee</title>
+    <style>
+      #header{
+        display:flex;
+        align-items:flex-start;
+        border:2px solid gray;
+        overflow:auto;
+        
+        }
+      #header p{
+        
+        position:relative;
+        margin-left:10px;
+        overflow:auto;
+      }
+      #header img{
+        
+        position:relative;
+        margin-left:10px;
+      }
+      .container {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+        padding: 10px;
+        scroll-snap-type: x proximity;
+      }
+
+      .container-item {
+        flex: 0 0 440px;
+        height: 400px;
+        background: #e74c3c;
+        color: white;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        scroll-snap-align: start;
+        font-size: 50px;
+      }
+      .container::-webkit-scrollbar {
+        display: none;
+      }
+      .container {
+      /* Cross-browser standard for modern Firefox and Chromium */
+        scrollbar-width: none; 
+      }
+      .scroll-button {
+        height: px;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        background: #af2213;
+      }
+      
+      
+    </style>
+    <script>
+      var x = 0;
+      function myFunction() {
+        if (x<0) {
+          x = 0;
+        }
+        if (x>2) {
+          x = 2;
+        }
+        if (x==0) {
+          document.getElementById('demo').innerHTML = 'Hello World';
+        }
+        if (x==1) {
+          document.getElementById('demo').innerHTML = 'Bye world';
+        }
+        if (x==2) {
+          document.getElementById('demo').innerHTML = 'Goodbye world';
+        }
+        console.log(x);
+      }
+      function scrollContainerLeft() {
+        document.querySelector('.container').scrollBy({ left: -220, behavior: 'smooth' });
+        console.log("Scrolling left");
+      }
+
+      function scrollContainerRight() {
+        document.querySelector('.container').scrollBy({ left: 220, behavior: 'smooth' });
+        console.log("Scrolling right");
+      }
+    </script>
+    <link rel="icon" href="made-by-rafi-amongus.gif" type="image/gif">
+  </head>
+
+  <body>
+    <header>
+      <div id = "header">
+        <div id = "brand">
+          <h3>JAD<br>KETTANI</h3>
+        </div>
+        <img src="maxwell.jpeg">
+        <p>Jad Kettani is a software engineer and low level programmer while web development is more of his job he can make low level and hyper efficient  applications for Linux</p>
+    </div>
+    </header>
+    <main>
+      <div id="main context">
+        <p >This is the main content area.</p>
+        <p id="demo">Hello World</p>
+        <button type="button" onclick="x--; myFunction();"><strong><--</strong></button>
+        <button type="button" onclick="x++; myFunction();"><strong>--></strong></button>
+        
+        
+      </div>
+      <hr>
+      <div class="container">
+          <div class="container-item"><p>This is a simple container.</p></div>
+          <div class="container-item"><p>This is a simple container.</p></div>
+          <div class="container-item"><p>This is a simple container.</p></div>
+          <div class="container-item"><p>This is a simple container.</p></div>
+          <div class="container-item"><p>This is a simple container.</p></div>
+          <div class="container-item"><p>This is a simple container.</p></div>
+          <div class="container-item"><p>This is a simple container.</p></div>
+          <div class="container-item"><p>This is a simple container.</p></div>
+          <div class="container-item"><p>This is a simple container.</p></div>
+          <div class="container-item"><p>This is a simple container.</p></div>
+          <div class="container-item"><p>This is a simple container.</p></div>
+          <div class="container-item"><p>This is a simple container.</p></div>
+          <div class="container-item"><p>This is a simple container.</p></div>
+          <div class="container-item"><p>This is a simple container.</p></div>
+          <div class="container-item"><p>This is a simple container.</p></div>
+          <div class="container-item"><p>This is a simple container.</p></div>
+          <div class="container-item"><p>This is a simple container.</p></div>
+          <div class="container-item"><p>This is a simple container.</p></div>
+          <div class="container-item"><p>This is a simple container.</p></div>
+          <div class="container-item"><p>This is a simple container.</p></div>
+          <div class="container-item"><p>This is a simple container.</p></div>
+          <div class="container-item"><p>This is a simple container.</p></div>
+        </div>
+        <div class="button-container">
+          <button class="scroll-button" onclick="scrollContainerLeft()">←</button>
+          <button class="scroll-button"onclick="scrollContainerRight()">→</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <hr>
+      
+      <h3>CONTACT INFORMATION</h3>
+      <p>Email: jad.kettani@example.com</p>
+      <p>Phone: (123) 456-7890</p>
+      <p>&copy; 2023 JAD KETTANI. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
+
